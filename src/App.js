@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+//import { Switch, Route} from "react-router-dom";
+import axios from 'axios'
+import Home from './pages/Home'
+import SingleUser from './components/singleUser/SingleUser'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './App.css'
+
+const App = ()=> {
+  const [ users, setUsers] = useState([])
+   
+  useEffect( ()=>{
+    const getData = async () =>{
+      axios.get('https://jsonplaceholder.typicode.com/users')
+     .then( res =>{
+       console.log(res.data)
+      setUsers(res.data)
+     })
+    }
+    getData()
+    },[])
+
+    return (
+      <Router>
+        <div className="App" >  
+             <Switch>
+               <Route path = '/' exact><Home users= {users}/></Route>
+               <Route path='/users/:id'> <SingleUser /></Route>
+             </Switch>
+        </div>
+      </Router>
+    );
+  };
+
 
 export default App;
