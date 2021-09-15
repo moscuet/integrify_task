@@ -3,14 +3,10 @@
     width: 300px;
     margin: 10px;
     padding-top: 10px;
-    /* background: #8cc32a; */
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     
-    /*background: #dff3df;  /* fallback for old browsers */
-    /*background: -webkit-linear-gradient(to right, #e1efe1, hsl(53, 100%, 50%,0.5));  /* Chrome 10-25, Safari 5.1-6 */
-    /*background: linear-gradient(to bottom, #e1efe1, hsl(53, 100%, 50%,0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+   }
 .user_card:hover{
     box-shadow: 0 0 5px ;
     text-decoration: none;

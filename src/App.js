@@ -1,6 +1,5 @@
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import React, { useState, useEffect } from 'react';
-//import { Switch, Route} from "react-router-dom";
 import axios from 'axios'
 import Home from './pages/Home'
 import SingleUser from './components/singleUser/SingleUser'
@@ -14,7 +13,6 @@ const App = ()=> {
     const getData = async () =>{
       axios.get('https://jsonplaceholder.typicode.com/users')
      .then( res =>{
-       console.log(res.data)
       setUsers(res.data)
      })
     }
