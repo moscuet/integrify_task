@@ -5,9 +5,9 @@ const Main = ({users}) => {
 
   const list = users.map( user => <UserCard  key ={user.id} user ={user}/>)
   return ( 
-      <>
-        <h1>All Users</h1>
-        <div className ='main'>           
+      <> 
+        <div className ='main'>  
+            <h1>All USers</h1>         
             {list}
         </div>
       </>         

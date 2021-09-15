@@ -1,5 +1,4 @@
 .button {
-    background-color: #4CAF50; /* Green */
     border: none;
     color: white;
     padding: 12px 32px;
@@ -9,6 +8,16 @@
     font-size: 16px;
     border-radius: 4px;
   }
-.button:hover {
+.button-primary {
+background-color: #4CAF50; 
+}
+.button-secondary {
+  background-color: darkgrey; 
+  }
+
+.button-primary:hover {
   background: darkgreen;
+}
+.button-secondary:hover {
+  background: rgb(61, 60, 60);
 }

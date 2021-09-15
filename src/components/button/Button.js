@@ -1,5 +1,6 @@
 import React from 'react'
 import './button.css'
-export default function Button({text}) {
-    return <button className='button'>{text}</button>  
+//bg is buttonn background ConvolverNode. option: bg = primary / secondary
+export default function Button({text,bg}) {
+    return <button className={`button button-${bg}`}>{text}</button>  
 }

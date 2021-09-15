@@ -1,6 +1,8 @@
 import axios from 'axios'
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router'
+import {Link} from 'react-router-dom'
+import Button from '../button/Button'
 import './singleUser.css'
 export default function SingleUser() {
     const [user, setUser] = useState();
@@ -37,7 +39,8 @@ export default function SingleUser() {
                                     ))}
                                 </ul>
                             </li>
-                       </ul>                      
+                       </ul>
+                       <Link to = {`/`}> <Button text = 'Go Back' bg ='secondary'/> </Link>                     
                    </div>
         }
    return <div className = 'single-user-container'>{html}</div>
